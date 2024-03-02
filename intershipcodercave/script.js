@@ -1,7 +1,7 @@
 // @ts-nocheck
 
-const johnSelectorBtn = document.querySelector('#anu-selector')
-const janeSelectorBtn = document.querySelector('#viji-selector')
+const anuSelectorBtn = document.querySelector('#anu-selector')
+const vijiSelectorBtn = document.querySelector('#viji-selector')
 const chatHeader = document.querySelector('.chat-header')
 const chatMessages = document.querySelector('.chat-messages')
 const chatInputForm = document.querySelector('.chat-input-form')
@@ -36,16 +36,16 @@ const updateMessageSender = (name) => {
     janeSelectorBtn.classList.remove('active-person')
   }
   if (name === 'viji') {
-    janeSelectorBtn.classList.add('active-person')
-    johnSelectorBtn.classList.remove('active-person')
+    vijiSelectorBtn.classList.add('active-person')
+    anuSelectorBtn.classList.remove('active-person')
   }
 
   /* auto-focus the input field */
   chatInput.focus()
 }
 
-johnSelectorBtn.onclick = () => updateMessageSender('anu')
-janeSelectorBtn.onclick = () => updateMessageSender('viji')
+anuSelectorBtn.onclick = () => updateMessageSender('anu')
+vijiSelectorBtn.onclick = () => updateMessageSender('viji')
 
 const sendMessage = (e) => {
   e.preventDefault()
